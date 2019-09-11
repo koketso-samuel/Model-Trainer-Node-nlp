@@ -1,0 +1,254 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "nlu": {
+      "log": true
+    }
+  },
+  "nluManager": {
+    "settings": {
+      "log": true
+    },
+    "languages": [
+      "en"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "language": "en",
+          "log": true,
+          "useNoneFeature": true,
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.7,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.08,
+            "log": true,
+            "timeout": 120000
+          }
+        },
+        "language": "en",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": false,
+        "keepStopwords": true,
+        "stemDict": {
+          "er": {
+            "domain": "default",
+            "intent": "ewr"
+          },
+          "wer": {
+            "domain": "default",
+            "intent": "ewr"
+          },
+          "g": {
+            "domain": "default",
+            "intent": "fg"
+          },
+          "fg": {
+            "domain": "default",
+            "intent": "fg"
+          }
+        },
+        "intentDict": {
+          "ewr": "default",
+          "fg": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "en",
+              "log": true,
+              "useNoneFeature": true,
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.7,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.08,
+                "log": true,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "ewr",
+                "tokens": [
+                  "wer"
+                ]
+              },
+              {
+                "intent": "fg",
+                "tokens": [
+                  "g"
+                ]
+              },
+              {
+                "intent": "fg",
+                "tokens": [
+                  "fg"
+                ]
+              }
+            ],
+            "features": {
+              "er": 1,
+              "wer": 1,
+              "g": 1,
+              "fg": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "log": true,
+                "useNoneFeature": true,
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.7,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.08,
+                  "log": true,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  4,
+                  3
+                ],
+                "layers": [
+                  {
+                    "wer": {},
+                    "g": {},
+                    "fg": {},
+                    "nonefeature": {}
+                  },
+                  {
+                    "ewr": {
+                      "bias": 2.079673943,
+                      "weights": {
+                        "wer": 10.29701519,
+                        "g": -2.054503679,
+                        "fg": -2.045143127,
+                        "nonefeature": -2.03427887
+                      }
+                    },
+                    "fg": {
+                      "bias": 4.167104392,
+                      "weights": {
+                        "wer": -4.076999187,
+                        "g": 8.259781837,
+                        "fg": 8.253168106,
+                        "nonefeature": -4.100471973
+                      }
+                    },
+                    "None": {
+                      "bias": 2.086751547,
+                      "weights": {
+                        "wer": -2.05080986,
+                        "g": -2.040941954,
+                        "fg": -2.02998662,
+                        "nonefeature": 10.289840698
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "fixedError": false,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.7,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.08,
+                  "maxDecimals": 9,
+                  "log": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "en",
+        "wer"
+      ],
+      [
+        "en",
+        "wer"
+      ],
+      [
+        "en",
+        "er"
+      ],
+      [
+        "en",
+        "wer"
+      ],
+      [
+        "en",
+        "wer"
+      ],
+      [
+        "en",
+        "g"
+      ],
+      [
+        "en",
+        "fg"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {}
+  },
+  "slotManager": {},
+  "responses": {},
+  "actions": {},
+  "utteranceDict": {
+    "?": "help"
+  }
+}

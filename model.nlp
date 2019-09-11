@@ -1,0 +1,861 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ]
+  },
+  "nluManager": {
+    "settings": {},
+    "languages": [
+      "en"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "language": "en",
+          "useNoneFeature": true,
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.7,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.08,
+            "timeout": 120000
+          }
+        },
+        "language": "en",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": false,
+        "keepStopwords": true,
+        "stemDict": {
+          "hi": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "hello": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "even": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "hullo": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "howdi": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "hey": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "hii": {
+            "domain": "default",
+            "intent": "greetings.hello"
+          },
+          "bye": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "goodby": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "bye,good": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "later,talk": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "later,see,you": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "am,go": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "convers,is,over,this": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "next,see,time,you": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "a,day,good,have": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "a,good,have,night": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "a,goodnight,have": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "a,goodmorn,have": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "a,good,have,morn": {
+            "domain": "default",
+            "intent": "greetings.bye"
+          },
+          "do,have,kind,of,websit,what,you": {
+            "domain": "default",
+            "intent": "faq.website.kinds"
+          },
+          "do,do,kind,of,websit,what,you": {
+            "domain": "default",
+            "intent": "faq.website.kinds"
+          },
+          "do,kind,make,of,websit,what,you": {
+            "domain": "default",
+            "intent": "faq.website.kinds"
+          },
+          "are,websit,what": {
+            "domain": "default",
+            "intent": "faq.website.kinds"
+          }
+        },
+        "intentDict": {
+          "greetings.hello": "default",
+          "greetings.bye": "default",
+          "faq.website.kinds": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "en",
+              "useNoneFeature": true,
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.7,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.08,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "hi"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "hello"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "even"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "hullo"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "howdi"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "hey"
+                ]
+              },
+              {
+                "intent": "greetings.hello",
+                "tokens": [
+                  "hii"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "bye"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "goodby"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "good",
+                  "bye"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "talk",
+                  "later"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "see",
+                  "you",
+                  "later"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "am",
+                  "go"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "this",
+                  "convers",
+                  "is",
+                  "over"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "see",
+                  "you",
+                  "next",
+                  "time"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "have",
+                  "a",
+                  "good",
+                  "day"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "have",
+                  "a",
+                  "good",
+                  "night"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "have",
+                  "a",
+                  "goodnight"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "have",
+                  "a",
+                  "goodmorn"
+                ]
+              },
+              {
+                "intent": "greetings.bye",
+                "tokens": [
+                  "have",
+                  "a",
+                  "good",
+                  "morn"
+                ]
+              },
+              {
+                "intent": "faq.website.kinds",
+                "tokens": [
+                  "what",
+                  "kind",
+                  "of",
+                  "websit",
+                  "do",
+                  "you",
+                  "have"
+                ]
+              },
+              {
+                "intent": "faq.website.kinds",
+                "tokens": [
+                  "what",
+                  "kind",
+                  "of",
+                  "websit",
+                  "do",
+                  "you",
+                  "do"
+                ]
+              },
+              {
+                "intent": "faq.website.kinds",
+                "tokens": [
+                  "what",
+                  "kind",
+                  "of",
+                  "websit",
+                  "do",
+                  "you",
+                  "make"
+                ]
+              },
+              {
+                "intent": "faq.website.kinds",
+                "tokens": [
+                  "what",
+                  "are",
+                  "websit"
+                ]
+              }
+            ],
+            "features": {
+              "hi": 1,
+              "hello": 1,
+              "even": 1,
+              "hullo": 1,
+              "howdi": 1,
+              "hey": 1,
+              "hii": 1,
+              "bye": 2,
+              "goodby": 1,
+              "good": 4,
+              "talk": 1,
+              "later": 2,
+              "see": 2,
+              "you": 5,
+              "am": 1,
+              "go": 1,
+              "this": 1,
+              "convers": 1,
+              "is": 1,
+              "over": 1,
+              "next": 1,
+              "time": 1,
+              "have": 6,
+              "a": 5,
+              "day": 1,
+              "night": 1,
+              "goodnight": 1,
+              "goodmorn": 1,
+              "morn": 1,
+              "what": 4,
+              "kind": 3,
+              "of": 3,
+              "websit": 4,
+              "do": 4,
+              "make": 1,
+              "are": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "useNoneFeature": true,
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.7,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.08,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  37,
+                  4
+                ],
+                "layers": [
+                  {
+                    "hi": {},
+                    "hello": {},
+                    "even": {},
+                    "hullo": {},
+                    "howdi": {},
+                    "hey": {},
+                    "hii": {},
+                    "bye": {},
+                    "goodby": {},
+                    "good": {},
+                    "talk": {},
+                    "later": {},
+                    "see": {},
+                    "you": {},
+                    "am": {},
+                    "go": {},
+                    "this": {},
+                    "convers": {},
+                    "is": {},
+                    "over": {},
+                    "next": {},
+                    "time": {},
+                    "have": {},
+                    "a": {},
+                    "day": {},
+                    "night": {},
+                    "goodnight": {},
+                    "goodmorn": {},
+                    "morn": {},
+                    "what": {},
+                    "kind": {},
+                    "of": {},
+                    "websit": {},
+                    "do": {},
+                    "make": {},
+                    "are": {},
+                    "nonefeature": {}
+                  },
+                  {
+                    "greetings.hello": {
+                      "bias": 6.136080788,
+                      "weights": {
+                        "hi": 6.356831551,
+                        "hello": 6.358999729,
+                        "even": 6.352539063,
+                        "hullo": 6.345146179,
+                        "howdi": 6.336800098,
+                        "hey": 6.327481747,
+                        "hii": 6.317174911,
+                        "bye": -6.120819092,
+                        "goodby": -6.099998951,
+                        "good": -1.80381465,
+                        "talk": -2.698989868,
+                        "later": -3.440727234,
+                        "see": -1.816018581,
+                        "you": -2.175437689,
+                        "am": -3.069741726,
+                        "go": -3.069741726,
+                        "this": -1.535005927,
+                        "convers": -1.535005927,
+                        "is": -1.535005927,
+                        "over": -1.535005927,
+                        "next": -1.074281216,
+                        "time": -1.074281216,
+                        "have": -2.632894039,
+                        "a": -2.541214466,
+                        "day": -0.319269717,
+                        "night": -0.260058075,
+                        "goodnight": -0.978824019,
+                        "goodmorn": -0.965837419,
+                        "morn": -0.017226387,
+                        "what": -2.166445017,
+                        "kind": -0.359420806,
+                        "of": -0.359420806,
+                        "websit": -2.166445017,
+                        "do": -0.359420806,
+                        "make": -0.084013991,
+                        "are": -1.80702579,
+                        "nonefeature": -6.070618153
+                      }
+                    },
+                    "greetings.bye": {
+                      "bias": 3.404602174,
+                      "weights": {
+                        "hi": -3.391539812,
+                        "hello": -3.387111664,
+                        "even": -3.382138252,
+                        "hullo": -3.376610279,
+                        "howdi": -3.3705194,
+                        "hey": -3.3638587,
+                        "hii": -3.356621981,
+                        "bye": 8.487319946,
+                        "goodby": 9.021266937,
+                        "good": 1.038022876,
+                        "talk": 4.271085262,
+                        "later": 4.807596207,
+                        "see": 2.925869703,
+                        "you": 1.385309935,
+                        "am": 4.550620079,
+                        "go": 4.550620079,
+                        "this": 2.274919987,
+                        "convers": 2.274919987,
+                        "is": 2.274919987,
+                        "over": 2.274919987,
+                        "next": 2.389370203,
+                        "time": 2.389370203,
+                        "have": 3.254773617,
+                        "a": 4.347177029,
+                        "day": 0.405330122,
+                        "night": 0.383104354,
+                        "goodnight": 1.585617542,
+                        "goodmorn": 1.597683191,
+                        "morn": 0.375451028,
+                        "what": -2.044932842,
+                        "kind": -1.540560603,
+                        "of": -1.540560603,
+                        "websit": -2.044932842,
+                        "do": -1.540560603,
+                        "make": -0.058153398,
+                        "are": -0.50437212,
+                        "nonefeature": -3.396009207
+                      }
+                    },
+                    "faq.website.kinds": {
+                      "bias": 0.261683388,
+                      "weights": {
+                        "hi": -0.283158064,
+                        "hello": -0.278702289,
+                        "even": -0.27509141,
+                        "hullo": -0.27230072,
+                        "howdi": -0.270262331,
+                        "hey": -0.268622518,
+                        "hii": -0.267218828,
+                        "bye": -0.272579491,
+                        "goodby": -0.26551187,
+                        "good": -0.186914816,
+                        "talk": -0.095650092,
+                        "later": -0.479912102,
+                        "see": -0.653226495,
+                        "you": 0.362967283,
+                        "am": -0.137669951,
+                        "go": -0.137669951,
+                        "this": -0.073885985,
+                        "convers": -0.073885985,
+                        "is": -0.073885985,
+                        "over": -0.073885985,
+                        "next": -0.26896444,
+                        "time": -0.26896444,
+                        "have": -0.019192887,
+                        "a": -0.192113489,
+                        "day": -0.052028622,
+                        "night": -0.040317778,
+                        "goodnight": -0.048880782,
+                        "goodmorn": -0.047593445,
+                        "morn": -0.003292889,
+                        "what": 4.417878628,
+                        "kind": 1.016193509,
+                        "of": 1.016193509,
+                        "websit": 4.417878628,
+                        "do": 1.016193509,
+                        "make": -0.011290006,
+                        "are": 3.401685715,
+                        "nonefeature": -0.288507789
+                      }
+                    },
+                    "None": {
+                      "bias": 0.87868342,
+                      "weights": {
+                        "hi": -0.877600431,
+                        "hello": -0.876041889,
+                        "even": -0.874308467,
+                        "hullo": -0.872399747,
+                        "howdi": -0.870315135,
+                        "hey": -0.868054271,
+                        "hii": -0.865617454,
+                        "bye": -0.864919662,
+                        "goodby": -0.860700786,
+                        "good": -0.224312082,
+                        "talk": -0.391061455,
+                        "later": -0.481666625,
+                        "see": -0.253154546,
+                        "you": -0.295578122,
+                        "am": -0.436233938,
+                        "go": -0.436233938,
+                        "this": -0.218474522,
+                        "convers": -0.218474522,
+                        "is": -0.218474522,
+                        "over": -0.218474522,
+                        "next": -0.162549496,
+                        "time": -0.162549496,
+                        "have": -0.370024383,
+                        "a": -0.359414667,
+                        "day": -0.037613906,
+                        "night": -0.030757293,
+                        "goodnight": -0.144801632,
+                        "goodmorn": -0.144158617,
+                        "morn": -0.002083141,
+                        "what": -0.305182397,
+                        "kind": -0.042423602,
+                        "of": -0.042423602,
+                        "websit": -0.305182397,
+                        "do": -0.042423602,
+                        "make": -0.009867722,
+                        "are": -0.262758791,
+                        "nonefeature": 11.546410561
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "fixedError": false,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.7,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.08,
+                  "maxDecimals": 9,
+                  "log": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "evening"
+      ],
+      [
+        "en",
+        "hullo"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "hii"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "good bye"
+      ],
+      [
+        "en",
+        "talk later"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "am going"
+      ],
+      [
+        "en",
+        "this conversion is over"
+      ],
+      [
+        "en",
+        "see you next time"
+      ],
+      [
+        "en",
+        "have a good day"
+      ],
+      [
+        "en",
+        "have a good night"
+      ],
+      [
+        "en",
+        "have a goodnight"
+      ],
+      [
+        "en",
+        "have a goodmorning"
+      ],
+      [
+        "en",
+        "have a good morning"
+      ],
+      [
+        "en",
+        "what kind of websites do you have"
+      ],
+      [
+        "en",
+        "what kind of websites do you do"
+      ],
+      [
+        "en",
+        "what kind of websites do you make"
+      ],
+      [
+        "en",
+        "what are websites"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {}
+  },
+  "slotManager": {},
+  "responses": {
+    "en": {
+      "Hey": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hello!": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hullo": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hello": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hope to see you later": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Hope I was helpful enough.": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "See you soon": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Hope you will get to use one of our services": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Hope you will come back to do business with us.": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Have a great one,  and remember. It's not just about getting done. It's about getting it done in the best possible way, and we are offering that.": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Alright. We hope you will come back for our excellent and robust services.": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Nice talking to you, hope you come back and do business with us.": [
+        {
+          "response": "greetings.bye"
+        }
+      ],
+      "Hey, how can I help you?": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hey, how can I assist you?": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hello, what would you like to know?": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hullo, Have a question about our services? Cause if you do, am here to do my best to answer it!": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "Hello! Can I help you?": [
+        {
+          "response": "greetings.hello"
+        }
+      ],
+      "We currently creating Single Page Application websites, Server side rendered websites, static websites, blogs, E-Commerce websites, Landing Page website, advertising websites, and Custom websites suited for your own requirements.": [
+        {
+          "response": "faq.website.kinds"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "utteranceDict": {
+    "?": "help"
+  }
+}
